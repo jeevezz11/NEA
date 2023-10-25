@@ -1,4 +1,4 @@
-# Version 0.5 for Linux #
+# Version 0.6 for Linux #
 
 import datetime
 import os
@@ -374,5 +374,3 @@ def createReport(date):
         daily.write(f"\nTotal Takings: £{totalPrice}")
 
     return report, totalPrice
-
-createReport("2023-09-19")

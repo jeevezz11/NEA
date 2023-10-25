@@ -1,3 +1,5 @@
+# Version 0.6 for Linux #
+
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
