@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-python3 gui.py
+python gui.py
