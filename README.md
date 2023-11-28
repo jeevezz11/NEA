@@ -7,6 +7,6 @@ command line:
 
 ```
 $ chmod +x setup.sh
-$ ./setup.sh # flags (-n nosleep will run through the script at full sleep -v verbose will output everything to the terminal you're in) 
+$ ./setup.sh # flags (-n nosleep will run through the script at full speed)
 ```
 
