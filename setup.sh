@@ -241,6 +241,7 @@ fi
 pacman_install python 
 pacman_install zenity 
 pacman_install curl 
+pacman_install tk
 
 # install the python libraries if they don't exist on the system
 
