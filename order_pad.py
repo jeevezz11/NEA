@@ -1,4 +1,4 @@
-# Version 0.10 for Linux #
+# Version 0.11 for Linux #
 
 import tkinter as tk
 import backend as bf # import the backend functions

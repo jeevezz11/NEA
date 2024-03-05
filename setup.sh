@@ -1,5 +1,5 @@
 #!/bin/zsh
-# Version 0.10 for Linux #
+# Version 0.11 for Linux #
 
 # Set default values
 debug_config=false 
@@ -104,22 +104,24 @@ valid_password() { # a function used to create a valid admin password and add it
     exit 1 # if the user doesnt enter a matching password in 3 attempts, exit
 }
 
-install_program() { # a function used to isntall a program script from github
+install_program() { 
     local repo="https://raw.githubusercontent.com/jeevezz11/NEA/main"
-    local file_name="$1" # take the first arguments after the function call as the file name to download
+    local file_name="$1" 
 
-    if [ ! -e "$file_name" ]; then # if the file doesn't exist in the current directory
+    if [ ! -e "$file_name" ]; then 
         echo "Installing $file_name..."
-
+        
         if [ $file_name = "database.db" ]; then
-            curl -LO "$repo/$file_name" -o "$data_directory" # install database to data directory instead of script directory 
+            echo "success"
+            curl -LO "$repo/$file_name" -o "$data_directory"
         else
-            curl -LO "$repo/$file_name" # install the file from the github using curl
+            echo "fail"
+            curl -LO "$repo/$file_name"
         fi
         
         echo "$file_name has been installed" 
     else
-        echo "$file_name found" # if the file exists there is no need to install it 
+        echo "$file_name found"
     fi  
 
     wait
