@@ -112,10 +112,9 @@ install_program() {
         echo "Installing $file_name..."
         
         if [ $file_name = "database.db" ]; then
-            echo "success"
-            curl -LO "$repo/$file_name" -o "$data_directory"
+            curl -LO "$repo/$file_name"
+            mv database.db "$data_directory/database.db" # move the newly installed database file to the data directory
         else
-            echo "fail"
             curl -LO "$repo/$file_name"
         fi
         
