@@ -1,4 +1,4 @@
-# Version 0.9 for Linux #
+# Version 0.10 for Linux #
 
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.backends import default_backend

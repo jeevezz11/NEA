@@ -1,5 +1,5 @@
 #!/bin/zsh
-# Version 0.9 for Linux #
+# Version 0.10 for Linux #
 
 # Set default values
 debug_config=false 
@@ -109,8 +109,14 @@ install_program() { # a function used to isntall a program script from github
     local file_name="$1" # take the first arguments after the function call as the file name to download
 
     if [ ! -e "$file_name" ]; then # if the file doesn't exist in the current directory
-        echo "Installing $file_name..." 
-        curl -LO "$repo/$file_name" # install the file from the github using curl
+        echo "Installing $file_name..."
+
+        if [ $file_name = "database.db" ]; then
+            curl -LO "$repo/$file_name" -o "$data_directory" # install database to data directory instead of script directory 
+        else
+            curl -LO "$repo/$file_name" # install the file from the github using curl
+        fi
+        
         echo "$file_name has been installed" 
     else
         echo "$file_name found" # if the file exists there is no need to install it 
@@ -239,6 +245,7 @@ pacman_install curl
 
 aur_install python-tkcalendar 
 aur_install sqlite3
+aur_install python-cryptography
 
 # Delete files only if running the script with --reset 
 if [ "$reset_script" = "true" ]; then

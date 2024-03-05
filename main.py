@@ -1,4 +1,4 @@
-# Version 0.9 for Linux #
+# Version 0.10 for Linux #
 
 import tkinter as tk # import the tkinter library for the GUI
 import backend as bf # import the backend script to do the processing
@@ -637,7 +637,7 @@ if __name__ == "__main__": # when run directly
 	root = tk.Tk() 
 	
 	default_font = tk.font.nametofont("TkDefaultFont")
-	default_font.configure(family="Work Sans", size="10") # set the preffered font
+	default_font.configure(family="Work Sans", size="10") # set the preferred font
 	
 	app = Menu(root) 
 	root.mainloop() # start the app
